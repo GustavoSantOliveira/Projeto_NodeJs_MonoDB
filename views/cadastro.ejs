@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/cadastro.css' />
+  </head>
+  <body>
+    <div id="conteudo">
+        <p class="logout"><input type="button" id="btnlogout" value="Logout" onclick="window.location='/'"></p>
+            <p class="header">Cadastro - Nota Fiscal</p>
+            <form action="<%= action %>" method="POST">
+                <div id="form">
+                <div id="inputs">
+                    <p class="campos">Número: <input type="text" name="numero" size ="50%" value="<%= docs.numero %>" /></p>
+                    <p class="campos">Descrição: <input type="text" name="descricao" size ="50%" value="<%= docs.descricao %>" /></p>
+                    <p class="campos">Data Faturamento: <input type="text" name="dtFat" size ="50%" value="<%= docs.dtFat %>" /></p>
+                    <p class="campos">Data Pagamento: <input type="text" name="dtPag" size ="50%" value="<%= docs.dtPag %>" /></p>
+                    <p class="campos">Status: <input type="text" name="status" size ="50%" value="<%= docs.status %>" /></p>
+                    <br>
+                    <p id="form"><input class="button" type="submit" value="Salvar" /><input class="button" type="button" value="Cancelar" onclick="window.location='/index1'" /></p>
+                </div>
+            </div>
+            </form>
+    </div>
+  </body>
+</html>

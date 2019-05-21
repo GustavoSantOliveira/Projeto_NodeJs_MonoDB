@@ -1,0 +1,38 @@
+body{
+    background-color:#384c60;
+    margin:2% 10% 2% 10%;
+    height: 100%;
+    min-height: 100%;
+    font-weight: bold;
+    font-family: Arial; 
+}
+#conteudo{
+    background-color:white;
+    padding: 20% 20%;
+    height: 24vh;
+    border-radius: 15px;
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+}
+p{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding: 10% 0% 0% 0%;
+}
+.btn{
+    color: white;
+    font-size: 5vh;
+    background-color:#f55e0d;
+    border-color:#f55e0d;
+    border-radius: 5px;
+    width: 48%;
+    height: 12vh;
+}
+
+.header{
+    font-size: 8vh;
+    color: #384c60;
+    margin: -10% 10% 10% 10%;
+}

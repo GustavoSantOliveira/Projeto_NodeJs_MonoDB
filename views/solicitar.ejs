@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/solicitar.css' />
+  </head>
+  <body>
+    <div id="conteudo">
+        <p class="logout"><input type="button" id="btnlogout" value="Logout" onclick="window.location='/'"></p>
+            <p class="header">Antecipação de pagamento</p>
+            <form action="<%= action %>" method="POST">
+                <div id="form">
+                <div id="inputs">
+                    <p class="campos">Número: <input type="text" name="numero" size ="50%" value="<%= doc.numero %>" readonly="true"/></p>
+                    <p class="campos">Data anterior: <input type="text" name="dtPag" size ="50%" value="<%= doc.dtPag %>" readonly="true"/></p>
+                    <p class="campos">Nova data: <input type="text" name="novaDt" size ="50%" value="" /></p>
+                    <br>
+                    <p id="form"><input class="button" type="submit" value="Salvar" /><input class="button" type="button" value="Cancelar" onclick="window.location='/index1'" /></p>
+                </div>
+            </div>
+            </form>
+    </div>
+  </body>
+</html>

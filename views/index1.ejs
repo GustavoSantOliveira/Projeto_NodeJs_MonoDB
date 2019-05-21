@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="/javascripts/jquery.min.js"></script>
+    <script src="/javascripts/jquery.validate.min.js"></script>
+    <title>
+        <%= title %>
+    </title>
+    <link rel='stylesheet' href='/stylesheets/index1.css' />
+    <script src="/javascripts/pesquisar.js"></script>
+</head>
+
+<body>
+    <div id="conteudo">
+    <p class="logout"><input type="button" id="btnlogout" value="Logout" onclick="window.location='/'"></p>
+    <p class="header">Detalhes - Nota Fiscal</p>
+    <div id="result">
+    <p class="pesquisa">
+    <input type="text" id="pesquisa" size="60%"><input type="button" id="btnpesquisa" value="Pesquisar">
+    </p>
+    <p class="pesquisa"><input type="button" id="btncadastro" value="Cadastrar nova Nota Fiscal" onclick="window.location='/novo'"></p>
+    <br>
+    <table class="table table-responsive">
+        <thead>
+        <tr>
+            <th>Número</th>
+            <th>Descrição</th>
+            <th>Data pagamento</th>
+            <th>Status</th>
+            <th>Solicitação</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% docs.forEach(function(notas){ %>
+            <tr id="campo">
+                <td><%= notas.numero %></td>
+                <td><%= notas.descricao %></td>
+                <td><%= notas.dtPag %></td>
+                <td id="status"><%= notas.status %></td>
+                <td><a href="/solicitar/<%= notas.numero %>">Solicitar</a></td>
+            </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</div>
+</div>
+</body>
+
+</html>

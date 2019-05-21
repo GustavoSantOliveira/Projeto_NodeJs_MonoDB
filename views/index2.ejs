@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="/javascripts/jquery.min.js"></script>
+    <script src="/javascripts/jquery.validate.min.js"></script>
+    <title>
+        <%= title %>
+    </title>
+    <link rel='stylesheet' href='/stylesheets/index2.css' />
+    <script src="/javascripts/pesquisasolic.js"></script>
+</head>
+
+<body>
+    <div id="conteudo">
+    <p class="logout"><input type="button" id="btnlogout" value="Logout" onclick="window.location='/'"></p>
+    <p class="header">Detalhes - Solicitações</p>
+    <div id="result">
+    <p class="pesquisa">
+    <input type="text" id="pesquisa" size="60%"><input type="button" id="btnpesquisa" value="Pesquisar" onclick="window.location='/index2'">
+    </p>
+    <br>
+    <table class="table table-responsive">
+        <thead>
+        <tr>
+            <th>Número</th>
+            <th>Data pagamento</th>
+            <th>Nova Data</th>
+            <th>Situação</th>
+            <th></th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <% docs.forEach(function(antecNotas){ %>
+            <tr id="campo">
+                <td><%= antecNotas.numero %></td>
+                <td><%= antecNotas.dtPag %></td>
+                <td><%= antecNotas.novaDt %></td>
+                <td><%= antecNotas.situacao %></td>
+                <td><a href="/aprovacao/<%= antecNotas._id %>">Aprovar</a></td>
+                <td><a href="/reprovacao/<%= antecNotas._id %>">Reprovar</a></td>
+            </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</div>
+</div>
+</body>
+
+</html>
